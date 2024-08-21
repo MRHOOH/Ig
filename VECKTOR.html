@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VECKTOR</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #343a40;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav ul li {
+            margin: 0;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ffc107;
+        }
+
+        section {
+            padding: 40px 20px;
+            flex-grow: 1;
+        }
+
+        h2 {
+            text-align: center;
+            color: #343a40;
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+
+        .course-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .course-item {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: calc(33% - 20px);
+            box-sizing: border-box;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+        }
+
+        .course-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        .course-item h3 {
+            margin-top: 0;
+            color: #007BFF;
+            font-size: 24px;
+        }
+
+        .course-item p {
+            color: #666;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .course-item button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .course-item button:hover {
+            background-color: #0056b3;
+        }
+
+        #course-detail {
+            display: none;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        #course-detail h2 {
+            color: #007BFF;
+            font-size: 24px;
+        }
+
+        footer {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: auto;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 16px;
+        }
+
+        @media (max-width: 768px) {
+            .course-item {
+                width: calc(50% - 20px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .course-item {
+                width: calc(100% - 20px);
+            }
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            height: 100px;
+        }
+
+        .form-group button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .form-group button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>WEBSITE VECKTOR</h1>
+        <nav>
+            <ul>
+                <li><a href="#Dos">Script</a></li>
+                <li><a href="#about">Information</a></li>
+                <li><a href="#contact">Sosmed</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="Dos">
+        <h2>DoS</h2>
+        <div class="course-list">
+            <div class="course-item">
+              <h4>Slowloris</h4>
+              <button onclick="showCourseDetail('Slowloris')">Open</button>
+            </div>
+            <div class="course-item">
+                <h4>Slowhttptest</h4>
+                <button onclick="showCourseDetail('Slowhttptest')">Open</button>
+            </div>
+            <div class="course-item">
+                <h4>LOIC</h4>
+                <button onclick="showCourseDetail('LOIC')">Open</button>
+            </div>
+        </div>
+
+        <h2>Apk</h2>
+        <div class="course-list">
+            <div class="course-item">
+                <h4>Cek Baned wa</h4>
+                <a href="https://www.mediafire.com/file/k6a7ok9b5s0i1s4/Cek_Banned_Terbaru_%25F0%259F%2594%25A5%25F0%259F%2598%2588.zip/file" target="_blank">
+                    <button>Download</button>
+                </a>
+            </div>
+            <div class="course-item">
+                <h4>Termux</h4>
+                <a href="https://f-droid.org/id/packages/com.termux/" target="_blank">
+                    <button>Download</button>
+                </a>
+            </div>
+            <div class="course-item">
+                <h4>Unbaned wa</h4>
+                <a href="https://www.mediafire.com/file/lx7vfriiv3axnxd/base%25283%2529.apk/file" target="_blank">
+                    <button>Download</button>
+                </a>
+            </div>
+        </div>
+
+        <h2>Hacking</h2>
+        <div class="course-list">
+            <div class="course-item">
+                <h4>Deface</h4>
+                <button onclick="showCourseDetail('Deface')">Open</button>
+            </div>
+            <div class="course-item">
+                <h4>Psqli-Pro</h4>
+                <button onclick="showCourseDetail('Psqli-Pro')">Open</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="course-detail">
+        <h1>Install</h1>
+        <div id="course-info"></div>
+        <button onclick="backToCourses()">Back</button>
+    </section>
+
+    <section id="about">
+        <h5>I'm VECKTOR. I am Anonymous—a force that eats away and destroys without mercy. In cyber darkness, I tore the system's cracks with brutality. No mercy here. I mastered the technique of ruthless destruction. If you're ready to face the darkness, find me in it.</h5>
+    </section>
+
+    <section id="contact">
+        <h2>my social media</h2>
+        <form id="contact-form">
+        <h5>Welcome to My Webpage</h5>
+
+    <main>
+        <h5>You can contact me via my social media</h5>
+
+        <!-- Sosmed section in the middle -->
+            <li><a href="https://www.instagram.com/vecktor2?igsh=YzljYTk1ODg3Zg==" target="_blank">Instagram</a></li>
+            <li><a href="https://www.youtube.com/@VEGERNOM.01" target="_blank">Youtube</a></li>
+        </ul>
+
+    </main>
+
+            </div>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Anonymous online hacking platform.</p>
+    </footer>
+
+    <script>
+        function showCourseDetail(courseName) {
+            const courseDetailSection = document.getElementById('course-detail');
+            const courseInfo = document.getElementById('course-info');
+
+            const courseDetails = {
+                "Slowloris": "git clone https://github.com/gkbrk/slowloris.git && cd slowloris && python3 slowloris.py (your ip address) -s 500 ",
+                "Slowhttptest": "sudo apt install slowhttptest",
+                "LOIC": "git clone https://github.com/NewEraCracker/LOIC && cd LOIC && bash loic.sh",
+                "Cek Baned wa": "Download APK for checking banned WhatsApp accounts.",
+                "Termux": "Download APK for Termux, a terminal emulator and Linux environment for Android.",
+                "Unbaned wa": "Download APK for unbanning WhatsApp accounts.",
+                "Deface": "git clone https://github.com/Ranginang67/AOXdeface && cd AOXdeface && python2 aox.py",
+                "Psqli-Pro": "git clone https://github.com/Agressiv1njector/psqli-pro && cd psqli-pro && bash psqli.sh",
+            };
+
+            courseInfo.innerHTML = `<h3>${courseName}</h3><p>${courseDetails[courseName]}</p>`;
+            courseDetailSection.style.display = 'block';
+            document.getElementById('Dos').style.display = 'none';
+            document.getElementById('about').style.display = 'none';
+            document.getElementById('contact').style.display = 'none';
+        }
+
+        function backToCourses() {
+            document.getElementById('course-detail').style.display = 'none';
+            document.getElementById('Dos').style.display = 'block';
+            document.getElementById('about').style.display = 'none';
+            document.getElementById('contact').style.display = 'none';
+        }
+
+        // Initialize to show the first section
+        window.onload = function() {
+            document.getElementById('Dos').style.display = 'block';
+            document.getElementById('about').style.display = 'none';
+            document.getElementById('contact').style.display = 'none';
+            document.getElementById('course-detail').style.display = 'none';
+        };
+
+        // Navigation functionality
+        document.querySelectorAll('nav ul li a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                document.getElementById('Dos').style.display = 'none';
+                document.getElementById('about').style.display = 'none';
+                document.getElementById('contact').style.display = 'none';
+                document.getElementById('course-detail').style.display = 'none';
+                document.getElementById(targetId).style.display = 'block';
+            });
+        });
+    </script>
+</body>
+
+</html>
